@@ -3,6 +3,8 @@ services:
     build: ./backend
     ports:
       - "8000:80"
+    volumes:
+      - ./backend/data:/app/data
 
   frontend:
     build: ./frontend
