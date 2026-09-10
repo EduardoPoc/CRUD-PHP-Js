@@ -10,7 +10,22 @@ function loadData(): array
 function saveData(array $data): void
 {
     file_put_contents(DATA_FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-}function insertUser(array $user): array
+}
+
+function findUserById(int $id): ?array
+{
+    $data = loadData();
+
+    foreach ($data['users'] as $user) {
+        if ($user['id'] === $id) {
+            return $user;
+        }
+    }
+
+    return null;
+}
+
+function insertUser(array $user): array
 {
     $data = loadData();
 

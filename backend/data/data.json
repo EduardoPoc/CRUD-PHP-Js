@@ -1,11 +1,4 @@
 {
-    "nextId": 4,
-    "users": [
-        {
-            "name": "Joãozin",
-            "age": 67,
-            "email": "joaozinn@email.com",
-            "id": 1
-        }
-    ]
+  "nextId": 2,
+  "users": [{ "name": "João", "age": 67, "email": "joao@email.com", "id": 1 }]
 }
