@@ -1,17 +1,35 @@
 {
-    "nextId": 4,
+    "nextId": 6,
     "users": [
         {
-            "name": "João",
-            "age": 67,
-            "email": "joao@email.com",
-            "id": 1
+            "id": 1,
+            "name": "Lucas Silva",
+            "age": 28,
+            "email": "lucas.silva@email.com"
         },
         {
-            "name": "Joãoa",
-            "age": 33,
-            "email": "sd@gmal.com",
-            "id": 3
+            "id": 2,
+            "name": "Mariana Santos",
+            "age": 34,
+            "email": "mariana.santos@email.com"
+        },
+        {
+            "id": 3,
+            "name": "Carlos Eduardo",
+            "age": 45,
+            "email": "carlos.eduardo@email.com"
+        },
+        {
+            "id": 4,
+            "name": "Beatriz Oliveira",
+            "age": 22,
+            "email": "beatriz.oliveira@email.com"
+        },
+        {
+            "id": 5,
+            "name": "Fernanda Lima",
+            "age": 31,
+            "email": "fernanda.lima@email.com"
         }
     ]
 }
