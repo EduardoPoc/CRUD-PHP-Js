@@ -4,12 +4,9 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - api-data:/app/data
+      - ./backend/data/:/app/data
 
   frontend:
     build: ./frontend
     ports:
       - "5500:80"
-
-volumes:
-  api-data:
