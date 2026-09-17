@@ -3,7 +3,8 @@ import { createUser } from "./scripts/api/create.js";
 import { deleteUser } from "./scripts/api/delete.js";
 import { updateUser, patchUser } from "./scripts/api/update.js";
 
-const apiUrl = "http://localhost:8000/api/users";
+const apiUrl =
+  import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/users";
 
 // Referências do DOM
 const form = document.getElementById("create-user-form");
@@ -72,7 +73,7 @@ usersSection.addEventListener("click", async (event) => {
     try {
       await deleteUser(apiUrl, user.id);
       if (editingId === user.id) exitEditMode();
-      renderUsers(apiUrl);
+      await renderUsers(apiUrl);
     } catch (error) {
       showError(error.message);
     }
@@ -114,11 +115,17 @@ form.addEventListener("submit", async (event) => {
     }
 
     exitEditMode();
-    renderUsers(apiUrl);
+    await renderUsers(apiUrl);
   } catch (error) {
     showError(error.message);
   }
 });
 
 // --- Primeira renderização ---
-document.addEventListener("DOMContentLoaded", () => renderUsers(apiUrl));
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await renderUsers(apiUrl);
+  } catch (error) {
+    showError(error.message);
+  }
+});

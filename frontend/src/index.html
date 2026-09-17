@@ -1,91 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD JS Project</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 
-    <link rel="stylesheet" href="styles/reset.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-
-  <body>
+<body>
     <header class="bg-dark text-white py-4 mb-4">
-      <h1 class="text-center m-0">PHP/JS CRUD Project</h1>
+        <h1 class="text-center m-0">PHP/JS CRUD Project</h1>
     </header>
-
     <main class="container">
-      <section class="card p-4 mb-4">
-        <h2 class="mb-3">Users</h2>
-        <div class="row g-3" id="users"></div>
-      </section>
-
-      <section class="card p-4">
-        <h2 class="mb-3" id="form-title">Create User</h2>
-
-        <div
-          id="form-error"
-          class="alert alert-danger d-none"
-          role="alert"
-        ></div>
-
-        <form id="create-user-form" class="row g-3 align-items-end">
-          <div class="col-md-4">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-
-          <div class="col-md-3">
-            <label for="age" class="form-label">Age</label>
-            <input
-              type="number"
-              class="form-control"
-              id="age"
-              name="age"
-              required
-            />
-          </div>
-
-          <div class="col-md-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-
-          <div class="col-md-2 d-flex gap-2">
-            <button type="submit" class="btn btn-dark flex-fill">Create</button>
-
-            <button
-              type="button"
-              id="cancel-edit"
-              class="btn btn-outline-secondary"
-              style="display: none"
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
-      </section>
+        <section class="card p-4 mb-4">
+            <h2 class="mb-3">Users</h2>
+            <div class="row g-3" id="users"></div>
+        </section>
+        <section class="card p-4">
+            <h2 class="mb-3" id="form-title">Create User</h2>
+            <div id="form-error" class="alert alert-danger d-none" role="alert"></div>
+            <form id="create-user-form" class="row g-3 align-items-end">
+                <div class="col-md-4">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-2 d-flex gap-2">
+                    <button type="submit" class="btn btn-dark flex-fill">Create</button>
+                    <button type="button" id="cancel-edit" class="btn btn-outline-secondary" style="display:none;">Cancel</button>
+                </div>
+            </form>
+        </section>
     </main>
+    <script type="module" src="app.js"></script>
+</body>
 
-    <script type="module" src="./app.js"></script>
-  </body>
 </html>
